@@ -1,4 +1,3 @@
-// src/components/GalleryPage.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Modal from './Modal';
@@ -15,25 +14,14 @@ import gallery9 from "../assets/gallery9.png";
 import gallery10 from "../assets/gallery10.png";
 import gallery11 from "../assets/gallery11.png";
 import gallery12 from "../assets/gallery12.png";
-import gallery13 from "../assets/gallery13.png";
-
+import gallery14 from "../assets/gallery14.png";
+import gallery15 from "../assets/gallery15.png";
+import gallery17 from "../assets/gallery17.png";
 
 const GalleryPage = () => {
   const images = [
-    gallery,
-    gallery1,
-    gallery2,
-    gallery3,
-    gallery4,
-    gallery5,
-    gallery6,
-    gallery7,
-    gallery8,
-    gallery9,
-    gallery10,
-    gallery11,
-    gallery12,
-    gallery13,
+    gallery, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7,
+    gallery8, gallery9, gallery10, gallery11, gallery12,gallery14,gallery15, gallery17,
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,8 +38,8 @@ const GalleryPage = () => {
   };
 
   return (
-    <div name='gallery' className="w-full min-h-screen text-black bg-white overflow-y-auto">
-      <div className="max-w-[1240px] mx-auto p-4 flex flex-col justify-center">
+    <div name='gallery' className="w-full min-h-screen text-black bg-white relative z-10">
+      <div className="max-w-[1240px] mx-auto p-4">
         <motion.div
           variants={{
             hidden: { opacity: 0, x: -100 },
@@ -62,12 +50,14 @@ const GalleryPage = () => {
           transition={{ duration: 2.0 }}
           className="pb-8 text-center"
         >
-          <p className="text-4xl font-bold inline border-b-4 text-black border-black">Full Gallery</p>
+          <p className="text-4xl font-bold inline border-b-4 text-black border-black">Gallery</p>
           <p className="py-6">A comprehensive collection of our works</p>
+          
+
+
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-
           {images.map((image, index) => (
             <motion.div
               key={index}
