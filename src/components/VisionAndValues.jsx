@@ -14,7 +14,7 @@ const VisionAndValues = () => {
   });
 
   return (
-    <div className='h-full m-auto py-16 px-16 pt-20'>
+    <div name='about' className='h-full m-auto py-16 px-16 pt-20'>
       <div>
         <motion.h3
           ref={refVision}
